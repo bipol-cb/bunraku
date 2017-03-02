@@ -1,10 +1,16 @@
 (ns bunraku.core
   (:import [org.openqa.selenium.chrome ChromeDriver]
+           [org.openqa.selenium.htmlunit HtmlUnitDriver]
            [org.openqa.selenium By]))
 
 (defn chrome-driver
   []
   {:driver (new ChromeDriver)
+   :element nil})
+
+(defn html-driver
+  []
+  {:driver (new HtmlUnitDriver)
    :element nil})
 
 (defn get-url
