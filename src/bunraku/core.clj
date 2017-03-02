@@ -32,6 +32,10 @@
   (Thread/sleep 1500)
   (.getTitle driver))
 
+(defn get-current-url
+  [{:keys [driver element]}]
+  (.getCurrentUrl driver))
+
 (defn click
   [{:keys [driver element] :as original}]
   (.click element)
